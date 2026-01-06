@@ -17,7 +17,7 @@ provider "aws" {
 resource "aws_instance" "app_server" {
   ami           = "ami-0f5fcdfbd140e4ab7"
   instance_type = "t3.micro"
-  key_name      = "IaC-pardechaves"
+  key_name      = "IaC-ParDeChaves"
 
   tags = {
     Name = "Primeira Instancia com Terraform"
