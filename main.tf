@@ -27,7 +27,7 @@ resource "aws_instance" "app_server" {
 
 
   tags = {
-    Name = "Primeira Instancia com Terraform"
+    Name = "Terraform-Ansible-Python3"
   }
 }
 
