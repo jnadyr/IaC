@@ -1,6 +1,6 @@
 resource "aws_security_group" "grupo_de_seguranca" {
-  name        = "grupo-de-seguranca"
-  description = "Grupo do Dev"
+  name        = "grupo-de-seguranca" # Nome do grupo de segurança
+  description = "Grupo do Dev" # Descrição do grupo de segurança
 
 ingress {
     from_port   = 22

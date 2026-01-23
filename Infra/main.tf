@@ -18,14 +18,14 @@ resource "aws_instance" "app_server" {
   ami           = "ami-0f5fcdfbd140e4ab7"
   instance_type = var.instancia
   key_name      = var.chave # Linha CRUCIAL: Associando a chave SSH à instância
-  security_groups = [aws_security_group.grupo_de_seguranca.name]
+  security_groups = [aws_security_group.grupo_de_seguranca.name] # Associando o grupo de segurança à instância
 }
 
 resource "aws_key_pair" "chave_SSH"  {
     key_name   = var.chave
-    public_key = file("${var.chave}.pub")
+    public_key = file("${var.chave}.pub") # Lê a chave pública do arquivo
     
   }
 output IP_publico {
-    value = aws_instance.app_server.public_ip
+    value = aws_instance.app_server.public_ip # Exibe o IP público da instância criada
   }
